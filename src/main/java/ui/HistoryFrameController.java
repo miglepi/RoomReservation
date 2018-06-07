@@ -27,7 +27,7 @@ public class HistoryFrameController {
         showRoomList();
         roomBox.setRenderer(new MyComboBoxRenderer("Select a room"));
         roomBox.setSelectedIndex(-1);
-        historyArea.setText("Select a room");
+        historyArea.setText("");
         statusTf.setText("");
     }
 
