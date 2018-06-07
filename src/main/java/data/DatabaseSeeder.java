@@ -11,7 +11,6 @@ public class DatabaseSeeder {
     private final RoomFactory roomFactory;
 
     public DatabaseSeeder(Repository repository, RoomFactory roomFactory) {
-
         this.repository = repository;
         this.roomFactory = roomFactory;
     }

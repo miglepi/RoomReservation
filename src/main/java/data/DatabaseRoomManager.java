@@ -11,18 +11,12 @@ public class DatabaseRoomManager implements RoomManager {
     private final Repository repository;
 
     public DatabaseRoomManager(Repository repository) {
-
         this.repository = repository;
     }
 
     @Override
     public ArrayList<Room> getRoomList() {
         return repository.getRoomList();
-    }
-
-    @Override
-    public Room getAvailableRoom() {
-        return null;
     }
 
     @Override

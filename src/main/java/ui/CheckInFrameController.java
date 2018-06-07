@@ -94,12 +94,9 @@ public class CheckInFrameController {
     }
 
     public void enableButton() {
-        if (nameTf.getText().equals("") || surnameTf.getText().equals(""))
-        {
+        if (nameTf.getText().equals("") || surnameTf.getText().equals("")) {
             registerBtn.setEnabled(false);
-        }
-        else
-        {
+        } else {
             registerBtn.setEnabled(true);
         }
     }

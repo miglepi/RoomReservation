@@ -1,3 +1,5 @@
+package data;
+
 import core.RoomFactory;
 import entity.Room;
 

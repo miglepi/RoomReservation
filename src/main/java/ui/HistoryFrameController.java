@@ -7,6 +7,7 @@ import entity.Room;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Comparator;
 import java.util.List;
 
 public class HistoryFrameController {
@@ -86,6 +87,7 @@ public class HistoryFrameController {
 
     private void showGuestsList(int roomId) {
         List<Guest> guests = roomManager.getGuestListByRoom(roomId);
+        guests.sort(Comparator.comparing(Guest::getId));
         if (guests.size() > 0) {
             for (Guest guest : guests) {
                 historyArea.append(guest.getName() + " " + guest.getSurname() + "\n");

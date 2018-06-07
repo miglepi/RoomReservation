@@ -9,8 +9,6 @@ public interface RoomManager {
 
     ArrayList<Room> getRoomList();
 
-    Room getAvailableRoom();
-
     int checkIn(Guest guest);
 
     ArrayList<Guest> getGuestListByRoom (int roomId);

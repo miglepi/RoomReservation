@@ -2,23 +2,21 @@ package data;
 
 import entity.Guest;
 import entity.Room;
-import org.sqlite.SQLiteDataSource;
 
+import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 
 public class Repository {
 
-    private SQLiteDataSource dataSource;
+    private DataSource dataSource;
 
     private static final String GUESTS_TABLE = "guests";
     private static final String ROOMS_TABLE = "rooms";
     private static final String HISTORY_TABLE = "history";
 
-
-    public Repository() {
-        dataSource = new SQLiteDataSource();
-        dataSource.setUrl("jdbc:sqlite:nomagic.db");
+    public Repository(DataSource dataSource) {
+        this.dataSource = dataSource;
     }
 
     public void insertRoom(Room room) {
